@@ -6,3 +6,14 @@ $: s("steinway")
 $: s("gm_synth_choir")
 
 $: note("c e g").sound("gm_blown_bottle") 
+
+
+---
+
+
+setcpm(100/4)
+$: s("<[bd]*8/8>").bank("ViscoSpaceDrum").dec(.4)
+
+$: note("c e g f a c g d b / 4").sound("gm_blown_bottle") 
+$: note("c e g /4").sound ("gm_acoustic_bass") 
+
