@@ -1,0 +1,8 @@
+setcpm(200/4)
+$: s("[bd bd]*2").bank("ViscoSpaceDrum").dec(.4)
+$: s("lt")
+$: s("wind")
+$: s("steinway") 
+$: s("gm_synth_choir")
+
+$: note("c e g").sound("gm_blown_bottle") 
