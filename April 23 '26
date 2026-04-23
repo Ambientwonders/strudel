@@ -17,3 +17,29 @@ $: s("<[bd]*8/8>").bank("ViscoSpaceDrum").dec(.4)
 $: note("c e g f a c g d b / 4").sound("gm_blown_bottle") 
 $: note("c e g /4").sound ("gm_acoustic_bass") 
 
+------
+
+
+$: s("bd ~ bd bd")
+.bank("ViscoSpaceDrum")
+.dec(0.6)
+.decay(rand.range(.8, 2))
+.room("1")
+
+
+$: n("0 ~ 2 4")
+.scale("G:mixolydian")
+.sound("shaker_large")
+.dec(0.9)
+
+
+$: n("<[0 2 4 2]>")
+.scale("G:mixolydian")
+.sound("gm_blown_bottle")
+.dec(1.2)
+.decay(rand.range(.8, 2))
+.room("1")
+
+$: n("~ ~ ~ ~ ~ ~ ~ [c e g]")
+.sound ("piano")
+.dec(2)
