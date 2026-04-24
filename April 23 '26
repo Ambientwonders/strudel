@@ -43,3 +43,66 @@ $: n("<[0 2 4 2]>")
 $: n("~ ~ ~ ~ ~ ~ ~ [c e g]")
 .sound ("piano")
 .dec(2)
+
+-------
+
+
+$: n("[0 3 7]")
+.scale("C:minor")
+.sound("gm_blown_bottle")
+.dec(4)
+.room(0.95)
+.slow(2)
+
+$: n("0 ~ 7 ~ 3")
+.scale("C:minor")
+.sound("shaker_small")
+.dec(1.5)
+.gain(rand.range(0.2, 0.5))
+.slow(2)
+
+$: s("new_tooth").slow(1)
+.begin(0.2).end(0.5)
+
+-----
+
+$: n("[0 3 7 3]")
+.scale("C:minor")
+.sound("xylophone_hard_ff")
+.jux(rev)
+.dec(4)
+.room(1)
+.slow(2)
+
+$: s("shaker_small ~ shaker_small ~")
+.dec(1.5)
+.gain(rand.range(0.2, 0.5))
+.slow(2)
+
+$piano: n("[0 3 7 10]*2")
+.jux(rev)
+.decay(rand.range(.8, 2))
+.sound("gm_blown_bottle")
+.scale("C:minor")
+.scaleTranspose("<0 12 24>")
+.gain(rand.range(.1, .6))
+.lpf(rand.range(1000, 2000))
+.attack(0)
+.room(1)
+
+$piano: n("[0 3 7 10]*2")
+.jux(rev)
+.decay(rand.range(.8, 2))
+.sound("piano")
+.scale("C:minor")
+.scaleTranspose("<0 12 24>")
+.gain(rand.range(.1, .6))
+.lpf(rand.range(1000, 2000))
+.attack(0)
+.room(1)
+
+
+//$kick: s("[bd*3] [~] [~] [~]").lpf(800).distort(2).gain(00.8)
+
+//$clap: s("~ cp ~ cp").gain(.3).room(.2)
+
